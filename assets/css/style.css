@@ -220,3 +220,17 @@ body {
   border-radius: 8px;
   background: #ffffff;
 }
+
+/* Button interactions */
+button:hover {
+  background: #6070ff;
+  box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+button:active {
+  background: #2230d2;
+  border-radius: 8px;
+  color: #ffffff;
+}
