@@ -1,9 +1,7 @@
 .container {
   max-width: 375px;
   height: 652px;
-
   border: 1px grey solid;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,7 +12,6 @@
   margin-left: 12px;
   margin-top: 4px;
   margin-bottom: 4px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +32,6 @@
 .main-content {
   margin-left: 24px;
   margin-right: 24px;
-
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -45,30 +41,27 @@
 .main-content h1 {
   margin: 0;
   padding: 0;
-
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   color: #172b4d;
-
   flex: none;
   order: 0;
   flex-grow: 0;
 }
+
 .main-content h5 {
   margin: 0;
   margin-top: 12px;
   padding: 0;
-
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -78,15 +71,13 @@
   margin: 0;
   margin-top: 12px;
   padding: 0;
-
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
   color: #7f8cff;
   text-shadow: grey;
-
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -97,10 +88,8 @@
   padding: 0;
   margin: 0;
   margin-top: 12px;
-
   display: flex;
   justify-content: flex-start;
-
   order: 3;
   flex-grow: 0;
 }
