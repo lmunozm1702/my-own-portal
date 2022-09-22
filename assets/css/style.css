@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .container {
   max-width: 375px;
   display: flex;
@@ -104,8 +108,9 @@
 }
 
 .work-container {
-  background-color: aqua;
   margin-top: 114px;
+  margin-left: 24px;
+  margin-right: 24px;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto;
@@ -114,6 +119,21 @@
 
 .work-item {
   background-color: white;
+  padding: 16px;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+}
+
+.work-item h2 {
+  margin: 0px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
 }
 
 .work-img {
@@ -124,11 +144,79 @@
 .project-info {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  justify-content: start;
+  column-gap: 15px;
+  margin-bottom: 12px;
 }
 
 .work-categories {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 12px;
   display: flex;
+}
+
+.project-client {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
+}
+
+.project-info-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+}
+
+.work-text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.work-cat {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 8px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  background: #ebebff;
+  border-radius: 8px;
+}
+
+.see-project-button {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  background: #ffffff;
 }
