@@ -98,6 +98,10 @@ main {
   flex-grow: 0;
 }
 
+.social-media-icons a {
+  color: #505f79;
+}
+
 .social-media-icons li {
   margin-right: 20px;
   font-size: 20px;
