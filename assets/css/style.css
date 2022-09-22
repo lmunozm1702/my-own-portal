@@ -1,3 +1,7 @@
+main {
+  background-image: url(/assets/images/header-shapes-mobile.png);
+}
+
 .container {
   max-width: 375px;
   height: 652px;
