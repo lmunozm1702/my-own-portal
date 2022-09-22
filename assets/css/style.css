@@ -5,9 +5,6 @@ main {
 .container {
   max-width: 375px;
   height: 652px;
-
-  /* uncomment next line to border activation */
-  /* border: 1px grey solid; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
