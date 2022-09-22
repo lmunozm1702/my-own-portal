@@ -1,0 +1,22 @@
+.toolbar-dark-compact {
+  margin-right: 24px;
+  margin-left: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-placeholder img {
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.normal-button {
+  color: #6070ff;
+  margin: 8px;
+}
