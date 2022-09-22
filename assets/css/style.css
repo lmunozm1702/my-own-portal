@@ -1,10 +1,5 @@
-main {
-  background-image: url(/assets/images/header-shapes-mobile.png);
-}
-
 .container {
   max-width: 375px;
-  height: 652px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,8 +28,9 @@ main {
 }
 
 .main-content {
-  margin-left: 24px;
-  margin-right: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-image: url(/assets/images/header-shapes-mobile.png);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -105,4 +101,34 @@ main {
   margin-right: 20px;
   font-size: 20px;
   color: #505f79;
+}
+
+.work-container {
+  background-color: aqua;
+  margin-top: 114px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 88px;
+}
+
+.work-item {
+  background-color: white;
+}
+
+.work-img {
+  padding: 0;
+  margin: 0;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.work-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
