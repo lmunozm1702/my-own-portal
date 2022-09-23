@@ -4,6 +4,7 @@ body {
   max-width: 375px;
   background-color: #f7f7f9;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,6 @@ body {
 }
 
 .toolbar-dark-compact {
-  margin: 0px;
   padding-right: 24px;
   padding-left: 12px;
   padding-top: 4px;
@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .logo-placeholder img {
@@ -37,7 +37,7 @@ body {
 .main-content {
   padding-left: 24px;
   padding-right: 24px;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url(/assets/images/header-shapes-mobile.png);
   display: flex;
   flex-direction: column;
@@ -132,7 +132,6 @@ h1 {
 }
 
 .work-item h2 {
-  margin: 0px;
   margin-top: 12px;
   margin-bottom: 12px;
   font-family: "Poppins", sans-serif;
@@ -225,22 +224,19 @@ h1 {
   padding-right: 12px;
   border: 1px solid #6070ff;
   border-radius: 8px;
-  background: #ffffff;
+  background: #fff;
 }
 
 .about-myself {
   padding-top: 114px;
-  margin-bottom: 0px;
   padding-left: 24px;
   padding-right: 24px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top-right-radius: 80px;
 }
 
 .code-experience {
   margin-top: 48px;
-  margin-bottom: 0px;
-  margin-left: 0px;
   margin-right: 24px;
 }
 
@@ -264,7 +260,7 @@ h1 {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #000000;
+  color: #000;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -301,7 +297,7 @@ h1 {
 .experience-list img {
   margin-left: 12px;
   margin-top: 5px;
-  margin: botton 10px;
+  margin-bottom: 5px;
   margin-right: 16px;
 }
 
@@ -313,13 +309,13 @@ h1 {
 /* Button interactions */
 button:hover {
   background: #6070ff;
-  box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
-  color: #ffffff;
+  color: #fff;
 }
 
 button:active {
   background: #2230d2;
   border-radius: 8px;
-  color: #ffffff;
+  color: #fff;
 }
