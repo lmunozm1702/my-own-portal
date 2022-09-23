@@ -41,7 +41,7 @@ body {
   justify-content: center;
 }
 
-.main-content h1 {
+h1 {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -91,6 +91,7 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 12px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: flex-start;
   order: 3;
@@ -109,6 +110,7 @@ body {
 
 .work-container {
   margin-top: 114px;
+  margin-bottom: 114px;
   margin-left: 24px;
   margin-right: 24px;
   display: grid;
@@ -219,6 +221,13 @@ body {
   border: 1px solid #6070ff;
   border-radius: 8px;
   background: #ffffff;
+}
+
+.about-myself {
+  margin-top: 114px;
+  margin-bottom: 0px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 /* Button interactions */
