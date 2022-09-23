@@ -1,22 +1,25 @@
 body {
   margin: 0;
   padding: 0;
+  max-width: 375px;
+  background-color: #f7f7f9;
 }
 .container {
-  max-width: 375px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .toolbar-dark-compact {
-  margin-right: 24px;
-  margin-left: 12px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin: 0px;
+  padding-right: 24px;
+  padding-left: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .logo-placeholder img {
@@ -34,11 +37,14 @@ body {
 .main-content {
   padding-left: 24px;
   padding-right: 24px;
+  background-color: #ffffff;
   background-image: url(/assets/images/header-shapes-mobile.png);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 65vh;
   justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 80px;
 }
 
 h1 {
@@ -228,6 +234,79 @@ h1 {
   margin-bottom: 0px;
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.code-experience {
+  margin-top: 48px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 24px;
+}
+
+.experience-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 12px;
+  border-top: 2px solid #f7f7f9;
+}
+
+.experience-nav li {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.experience-nav i {
+  color: #7a869a;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-item {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.experience-list img {
+  margin-left: 12px;
+  margin-top: 5px;
+  margin: botton 10px;
+  margin-right: 16px;
+}
+
+.list-header {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 /* Button interactions */
