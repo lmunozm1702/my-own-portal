@@ -60,6 +60,20 @@ h1 {
   flex-grow: 0;
 }
 
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .main-normal-text {
   margin: 0;
   margin-top: 12px;
@@ -131,7 +145,7 @@ h1 {
   border-radius: 16px;
 }
 
-.work-item h2 {
+.work-item h3 {
   margin-top: 12px;
   margin-bottom: 12px;
   font-family: "Poppins", sans-serif;
