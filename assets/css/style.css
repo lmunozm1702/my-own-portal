@@ -355,7 +355,7 @@ label {
 }
 
 .contact-me h2 {
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 
@@ -378,6 +378,7 @@ label {
   border: none;
   color: #172b4d;
 }
+
 .contact-me-text textarea {
   font-family: "Poppins", sans-serif;
   font-style: normal;
