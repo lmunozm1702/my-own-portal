@@ -37,6 +37,7 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   background-color: #fff;
+  background-repeat: no-repeat;
   background-image: url(/assets/images/header-shapes-mobile.png);
   display: flex;
   flex-direction: column;
@@ -329,10 +330,115 @@ button:hover {
   box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   color: #fff;
+  border: 1px solid #fff;
 }
 
 button:active {
   background: #2230d2;
   border-radius: 8px;
   color: #fff;
+}
+
+label {
+  display: none;
+}
+
+.contact-me {
+  padding-top: 114px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #6070ff;
+  border-top-left-radius: 80px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/contact-form-shapes-mobile.png);
+  background-position-x: right;
+}
+
+.contact-me h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.contact-me p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+}
+
+.contact-me-text {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  color: #172b4d;
+}
+
+.contact-me-text textarea {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #172b4d;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #b3bac5;
+  opacity: 1; /* Firefox */
+}
+
+.contact-me-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me-email {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  color: #172b4d;
+}
+
+.contact-me-textarea {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  color: #172b4d;
+}
+
+.contact-me-submit {
+  color: #6070ff;
+  padding: 12px 16px 12px 16px;
+  font-size: 17px;
+  line-height: 20px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 11px;
+}
+
+hr {
+  width: 134px;
+  height: 5px;
+  bottom: 8px;
+  margin: 21px auto 8px auto;
+  background: #0d151e;
+  border-radius: 10px;
+  border: none;
 }
