@@ -44,6 +44,13 @@ h3 {
   color: #172b4d;
 }
 
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
 hr {
   width: 134px;
   height: 5px;
@@ -52,6 +59,16 @@ hr {
   background: #0d151e;
   border-radius: 10px;
   border: none;
+}
+
+.only-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .only-desktop {
+    display: block;
+  }
 }
 
 .container {
@@ -103,7 +120,7 @@ hr {
   }
 
   .nav-right-text {
-    display: contents;
+    display: block;
   }
 
   .nav-right-text ul {
@@ -173,7 +190,7 @@ hr {
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
-  text-shadow: grey;
+  text-shadow: grey 1px 1px 2px;
 }
 
 .social-media-icons {
@@ -204,11 +221,31 @@ hr {
   gap: 88px;
 }
 
+@media only screen and (min-width: 768px) {
+  .work-container {
+    margin: 142px;
+  }
+}
+
 .work-item {
   background-color: white;
   padding: 16px;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-item {
+    flex-direction: row;
+    gap: 22px;
+    margin: 24px;
+  }
+
+  .order-1 {
+    flex-direction: row-reverse;
+  }
 }
 
 .work-img {
@@ -220,20 +257,30 @@ hr {
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .work-img img {
+    width: 544px;
+    height: auto;
+  }
+}
+
+.work-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-main {
+    gap: 24px;
+  }
+}
+
 .project-info {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   justify-content: start;
   column-gap: 15px;
-  margin-bottom: 12px;
-}
-
-.work-categories {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 12px;
-  display: flex;
 }
 
 .project-client {
@@ -245,6 +292,14 @@ hr {
   color: #344563;
 }
 
+@media only screen and (min-width: 768px) {
+  .project-client {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
 .project-info-text {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -254,6 +309,14 @@ hr {
   color: #7a869a;
 }
 
+@media only screen and (min-width: 768px) {
+  .project-info-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
 .work-text {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -261,8 +324,20 @@ hr {
   font-size: 15px;
   line-height: 24px;
   color: #344563;
-  margin: 0 0 12px 0;
   padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .work-text {
+    font-size: 16px;
+  }
+}
+
+.work-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .work-cat {
