@@ -15,6 +15,13 @@ h1 {
   color: #172b4d;
 }
 
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
 h2 {
   margin: 0;
   padding: 0;
@@ -61,6 +68,57 @@ hr {
   background-color: #fff;
 }
 
+.nav-right-text {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 1440px;
+    border: 1px solid #000;
+  }
+
+  a,
+  a:link,
+  a:active,
+  a:visited,
+  a:focus,
+  a:hover {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #344563;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .toolbar-dark-compact {
+    padding: 16px 142px 16px 142px;
+  }
+
+  .nav-right-hamburguer {
+    display: none;
+  }
+
+  .nav-right-text {
+    display: contents;
+  }
+
+  .nav-right-text ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-right-text li {
+    padding: 10px 12px;
+    margin-left: 8px;
+  }
+}
+
 .logo-placeholder img {
   margin: 10px 12px 10px 12px;
 }
@@ -71,16 +129,21 @@ hr {
 }
 
 .main-content {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 114px;
+  padding: 114px 24px 114px 24px;
   background-color: #fff;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/header-shapes-mobile.png);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-bottom-left-radius: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-content {
+    padding: 289px 260px;
+    background-image: url(/assets/images/header-bg.png);
+  }
 }
 
 .main-normal-text {
@@ -94,14 +157,21 @@ hr {
   color: #344563;
 }
 
+@media only screen and (min-width: 768px) {
+  .main-normal-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
 .social-media-title {
   margin: 12px 0 0 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 24px;
   color: #7f8cff;
   text-shadow: grey;
 }
@@ -224,7 +294,7 @@ hr {
 }
 
 .about-myself {
-  padding: 114px 24px 0 24px;
+  padding: 114px 24px 114px 24px;
   background-color: #fff;
   border-top-right-radius: 80px;
 }
