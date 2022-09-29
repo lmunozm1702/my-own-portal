@@ -555,7 +555,11 @@ label {
   background: #f7f7f9;
   border-radius: 8px;
   margin-bottom: 12px;
-  gap: 0.555vw;
+  gap: 5vw;
+}
+
+.experience-img {
+  padding: 0 5px 0 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -566,11 +570,19 @@ label {
     font-size: 1.042vw;
     line-height: 1.333;
     border-radius: 0.556vw;
+    gap: 0.1vw;
   }
 
   .experience-item div {
     padding: 0;
     margin: 0;
+  }
+
+  .languaje-item {
+    margin-top: 0;
+  }
+  .experience-img {
+    padding: 0 2px 0 0;
   }
 }
 
@@ -604,8 +616,8 @@ label {
 }
 
 .contact-me-footer {
-  margin-bottom: 40px;
-  margin-top: 12px;
+  margin-bottom: 8px;
+  margin-top: 32px;
   text-align: center;
 }
 
@@ -714,7 +726,13 @@ label {
 .contact-me-form {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-me-form {
+    text-align: center;
+  }
 }
 
 .contact-me-email {
