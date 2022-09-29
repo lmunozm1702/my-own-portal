@@ -17,8 +17,8 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 3.333vw;
+    line-height: 1.25;
   }
 }
 
@@ -46,8 +46,8 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   h3 {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 2.778vw;
+    line-height: 1.3;
   }
 }
 
@@ -59,6 +59,25 @@ hr {
   background: #0d151e;
   border-radius: 10px;
   border: none;
+}
+
+/* Button interactions */
+button:hover {
+  background: #6070ff;
+  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+button:active {
+  background: #2230d2;
+  border-radius: 8px;
+  color: #fff;
+}
+
+label {
+  display: none;
 }
 
 .only-desktop {
@@ -91,7 +110,6 @@ hr {
 
 @media only screen and (min-width: 768px) {
   body {
-    width: 1440px;
     border: 1px solid #000;
   }
 
@@ -104,15 +122,21 @@ hr {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 1.042vw;
+    line-height: 1.389vw;
     color: #344563;
     outline: none;
     text-decoration: none;
   }
 
   .toolbar-dark-compact {
-    padding: 16px 142px 16px 142px;
+    padding: 16px 24px 16px 24px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .toolbar-dark-compact {
+      padding: 16px 9.931vw 16px 9.931vw;
+    }
   }
 
   .nav-right-hamburguer {
@@ -140,16 +164,35 @@ hr {
   margin: 10px 12px 10px 12px;
 }
 
+@media only screen and (min-width: 768px) {
+  nav-right-text li {
+    padding: 10px 0.833vw;
+    margin-left: 0.556vw;
+  }
+
+  .logo-placeholder img {
+    margin: 10px 0.833vw;
+  }
+}
+
 .normal-button {
   color: #6070ff;
   margin: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .normal-button {
+    color: #6070ff;
+    margin: 8px 0.556vw;
+  }
 }
 
 .main-content {
   padding: 114px 24px 114px 24px;
   background-color: #fff;
   background-repeat: no-repeat;
-
+  background-image: url(/assets/images/header-shapes-mobile.png);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,8 +201,9 @@ hr {
 
 @media only screen and (min-width: 768px) {
   .main-content {
-    padding: 289px 260px;
+    padding: 289px 18.056vw;
     background-image: url(/assets/images/header-bg.png);
+    border-bottom-left-radius: 5.556vw;
   }
 }
 
@@ -176,8 +220,8 @@ hr {
 
 @media only screen and (min-width: 768px) {
   .main-normal-text {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.389vw;
+    line-height: 1.4;
   }
 }
 
@@ -192,6 +236,13 @@ hr {
   color: #7f8cff;
   text-shadow: grey 1px 1px 2px;
 }
+
+@media only screen and (min-width: 768px) {
+  .social-media-title {
+    font-size: 1.111vw;
+    line-height: 1.5;
+  }
+
 
 .social-media-icons {
   list-style: none;
@@ -213,6 +264,14 @@ hr {
   color: #505f79;
 }
 
+@media only screen and (min-width: 768px) {
+  .social-media-icons li {
+    margin-right: 1.389vw;
+    font-size: 1.389vw;
+    line-height: 1.2;
+  }
+}
+
 .work-container {
   margin: 114px 24px 114px 24px;
   display: grid;
@@ -223,7 +282,7 @@ hr {
 
 @media only screen and (min-width: 768px) {
   .work-container {
-    margin: 142px;
+    margin: 142px 9.861vw;
   }
 }
 
@@ -239,8 +298,9 @@ hr {
 @media only screen and (min-width: 768px) {
   .work-item {
     flex-direction: row;
-    gap: 22px;
-    margin: 24px;
+    gap: 1.528vw;
+    margin: 4% 1.667vw;
+    justify-content: center;
   }
 
   .order-1 {
@@ -255,13 +315,6 @@ hr {
 
 .work-img img {
   width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .work-img img {
-    width: 544px;
-    height: auto;
-  }
 }
 
 .work-main {
@@ -280,7 +333,7 @@ hr {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   justify-content: start;
-  column-gap: 15px;
+  column-gap: 1.042vw;
 }
 
 .project-client {
@@ -295,8 +348,8 @@ hr {
 @media only screen and (min-width: 768px) {
   .project-client {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.25vw;
+    line-height: 1.333;
   }
 }
 
@@ -312,8 +365,8 @@ hr {
 @media only screen and (min-width: 768px) {
   .project-info-text {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.25vw;
+    line-height: 1.333;
   }
 }
 
@@ -329,7 +382,8 @@ hr {
 
 @media only screen and (min-width: 768px) {
   .work-text {
-    font-size: 16px;
+    font-size: 1.111vw;
+    line-height: 1.5;
   }
 }
 
@@ -354,6 +408,14 @@ hr {
   border-radius: 8px;
 }
 
+@media only screen and (min-width: 768px) {
+  .work-cat {
+    font-size: 0.833vw;
+    line-height: 1.333;
+    border-radius: 0.556vw;
+  }
+}
+
 .see-project-button {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -368,15 +430,50 @@ hr {
   background: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+  .see-project-button {
+    font-size: 1.181vw;
+    line-height: 1.4;
+    border-radius: 0.556vw;
+  }
+}
+
 .about-myself {
   padding: 114px 24px 114px 24px;
   background-color: #fff;
   border-top-right-radius: 80px;
+  display: flex;
+  flex-direction: column;
 }
 
 .code-experience {
   margin-top: 48px;
   margin-right: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-myself {
+    padding: 114px 9.861vw;
+    background-color: #fff;
+    border-top-right-radius: 5.556vw;
+    flex-direction: row;
+    justify-items: flex-start;
+    gap: 1.667vw;
+  }
+  .about-myself-aside {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-myself-main {
+    width: 50%;
+  }
+
+  .code-experience {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .experience-nav {
@@ -385,7 +482,6 @@ hr {
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
   margin: 24px 24px 24px 12px;
   border-top: 2px solid #f7f7f9;
 }
@@ -401,6 +497,18 @@ hr {
   margin-bottom: 24px;
 }
 
+@media only screen and (min-width: 768px) {
+  .experience-nav li {
+    margin-top: 0;
+    font-size: 1.389vw;
+    line-height: 1.2;
+  }
+
+  .experience-nav {
+    margin: 0;
+  }
+}
+
 .experience-nav i {
   color: #7a869a;
 }
@@ -411,6 +519,15 @@ hr {
   margin: 12px 0 12px 12px;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .experience-list {
+    flex-direction: row;
+    gap: 0.833vw;
+    margin: 0 0 12px 0.833vw;
+    padding: 0;
+  }
 }
 
 .experience-item {
@@ -427,6 +544,22 @@ hr {
   margin-bottom: 12px;
 }
 
+@media only screen and (min-width: 768px) {
+  .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2.778vw 0 0.833vw;
+    font-size: 1.042vw;
+    line-height: 1.333;
+    border-radius: 0.556vw;
+  }
+
+  .experience-item div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .experience-list img {
   margin: 5px 16px 5px 12px;
 }
@@ -436,23 +569,14 @@ hr {
   margin-bottom: 24px;
 }
 
-/* Button interactions */
-button:hover {
-  background: #6070ff;
-  box-shadow: 1px 8px 16px rgba(64, 83, 252, 0.24);
-  border-radius: 8px;
-  color: #fff;
-  border: 1px solid #fff;
-}
+@media only screen and (min-width: 768px) {
+  .experience-list img {
+    margin: 5px 0;
+  }
 
-button:active {
-  background: #2230d2;
-  border-radius: 8px;
-  color: #fff;
-}
-
-label {
-  display: none;
+  .list-header {
+    margin: 0 0.833vw;
+  }
 }
 
 .contact-me {
