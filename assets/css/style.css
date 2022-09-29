@@ -163,7 +163,7 @@ label {
 }
 
 @media only screen and (min-width: 768px) {
-  nav-right-text li {
+  .nav-right-text li {
     padding: 10px 0.833vw;
     margin-left: 0.556vw;
   }
@@ -458,6 +458,7 @@ label {
     justify-items: flex-start;
     gap: 1.667vw;
   }
+
   .about-myself-aside {
     width: 50%;
     margin: 0;
@@ -610,6 +611,7 @@ label {
     padding: 0;
     margin: 12px 12.292vw;
   }
+
   .contact-me-footer {
     padding: 0;
     margin-bottom: 117px;
