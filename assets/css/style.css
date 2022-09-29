@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f9;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -189,7 +190,7 @@ label {
   padding: 114px 24px 114px 24px;
   background-color: #fff;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/header-shapes-mobile.png);
+  background-image: url(/assets/images/header-mobile.png);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -201,6 +202,7 @@ label {
   .main-content {
     padding: 289px 18.056vw;
     background-image: url(/assets/images/header-bg.png);
+    background-size: contain;
     border-bottom-left-radius: 5.556vw;
   }
 }
@@ -299,6 +301,9 @@ label {
     gap: 1.528vw;
     margin: 4% 1.667vw;
     justify-content: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 
   .order-1 {
@@ -324,6 +329,15 @@ label {
 @media only screen and (min-width: 768px) {
   .work-main {
     gap: 24px;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .work-item-header {
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 }
 
@@ -541,7 +555,7 @@ label {
   background: #f7f7f9;
   border-radius: 8px;
   margin-bottom: 12px;
-  gap: 5vw;
+  gap: 0.555vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -598,8 +612,9 @@ label {
 @media only screen and (min-width: 768px) {
   .contact-me {
     padding: 114px 22.222vw 8px 22.222vw;
-    background-image: url(/assets/images/contact-form-background-shape-desktop.png);
     border-top-left-radius: 5.556vw;
+    background-image: url(/assets/images/contact-desktop.png);
+    background-size: contain;
   }
 
   .contact-me-header {
@@ -610,6 +625,7 @@ label {
   .contact-me-main {
     padding: 0;
     margin: 12px 12.292vw;
+    align-items: center;
   }
 
   .contact-me-footer {
@@ -698,6 +714,7 @@ label {
 .contact-me-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .contact-me-email {
@@ -746,7 +763,13 @@ label {
 
 @media only screen and (min-width: 768px) {
   .contact-me-text {
-    border-radius: 0.556;
+    border-radius: 0.556vw;
+    font-size: 1.181vw;
+    line-height: 1.18;
+  }
+
+  .contact-me-submit {
+    border-radius: 0.556vw;
     font-size: 1.181vw;
     line-height: 1.18;
   }
