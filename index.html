@@ -16,9 +16,17 @@
 <body>
 
     <header class="toolbar-dark-compact">
-        <div class="logo-placeholder"><a href="/"><img src="assets/images/my_logo.png" alt="Portal logo"></a></div>
+        <div class="logo-placeholder"><a href="/"><img src="assets/images/logo-placeholder.png" alt="Portal logo"></a>
+        </div>
         <div class="normal-button">
-            <nav><i class="fa-solid fa-bars"></i></nav>
+            <nav class="nav-right-hamburguer"><i class="fa-solid fa-bars"></i></nav>
+            <nav class="nav-right-text">
+                <ul>
+                    <li><a href="#a-work-container">Portfolio</a></li>
+                    <li><a href="#a-about-myself">About</a></li>
+                    <li><a href="#a-contact-me">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -36,22 +44,27 @@
                 <li>
                     <a href="#" target="_blank"><i class="fa-solid fa-hand-peace"></i></a>
                 </li>
-                <li><a href="https://twitter.com/lmunozm" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <li><a href="https://twitter.com/lmunozm" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a>
                 </li>
                 <li><a href="https://www.linkedin.com/in/luis-munoz-manriquez/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
+                            class="fa-brands fa-linkedin-in fa-lg"></i></a>
                 </li>
-                <li><a href="https://github.com/lmunozm1702" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <li><a href="https://github.com/lmunozm1702" target="_blank"><i
+                            class="fa-brands fa-github fa-lg"></i></a>
                 </li>
-                <li><a href="https://medium.com/@lmunozm1702" target="_blank"><i class="fa-brands fa-medium"></i></a>
+                <li><a href="https://medium.com/@lmunozm1702" target="_blank"><i
+                            class="fa-brands fa-medium fa-lg"></i></a>
                 </li>
             </ul>
         </section>
-        <section class="work-container">
+
+        <section id="a-work-container" class="work-container">
             <article class="work-item">
-                <header>
-                    <figure class="work-img"><img src="assets/images/project-tonic.png"
-                            alt="Project Tonic Prevew Image"></figure>
+                <header class="work-item-header">
+                    <figure class="work-img"><img src="assets/images/tonic.png" alt="Project Tonic Prevew Image">
+                    </figure>
+                </header>
+                <main class="work-main">
                     <h3>Tonic</h3>
                     <div class="project-info">
                         <div class="project-client">CANOPY</div>
@@ -60,223 +73,256 @@
                         <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
                         <div class="project-info-text">2015</div>
                     </div>
-                </header>
-                <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
-                    required.</p>
-                <ul class="work-categories">
-                    <li class="work-cat">html</li>
-                    <li class="work-cat">css</li>
-                    <li class="work-cat">javaScript</li>
-                </ul>
-                <footer>
+                    <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
+                        required.</p>
+                    <ul class="work-categories">
+                        <li class="work-cat">html</li>
+                        <li class="work-cat">css</li>
+                        <li class="work-cat">javaScript</li>
+                    </ul>
                     <div><button class="see-project-button">See Project</button></div>
-                </footer>
+                </main>
             </article>
-            <article class="work-item">
-                <header>
-                    <figure class="work-img"><img src="assets/images/project-multi-post.png"
+            <article class="work-item order-1">
+                <header class="work-item-header">
+                    <figure class="work-img"><img src="assets/images/multi-post.png"
                             alt="Project Multi Post Preview Image"></figure>
+                </header>
+                <main class="work-main">
                     <h3>Multi-Post Stories</h3>
                     <div class="project-info">
-                        <div class="project-client">CANOPY</div>
+                        <div class="project-client">FACEBOOK</div>
                         <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
-                        <div class="project-info-text">Back End Dev</div>
+                        <div class="project-info-text">Full Stack Dev</div>
                         <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
                         <div class="project-info-text">2015</div>
                     </div>
-                </header>
-                <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
-                    required.</p>
-                <ul class="work-categories">
-                    <li class="work-cat">html</li>
-                    <li class="work-cat">css</li>
-                    <li class="work-cat">javaScript</li>
-                </ul>
-                <footer>
+                    <p class="work-text">Experimental content creation feature that allows users to add to an existing
+                        story
+                        over the course of a day without spamming their friends.</p>
+                    <ul class="work-categories">
+                        <li class="work-cat">html</li>
+                        <li class="work-cat only-desktop">Ruby on rails</li>
+                        <li class="work-cat">css</li>
+                        <li class="work-cat">javaScript</li>
+                    </ul>
                     <div><button class="see-project-button">See Project</button></div>
-                </footer>
+                </main>
             </article>
             <article class="work-item">
-                <header>
-                    <figure class="work-img"><img src="assets/images/project-tonic-2.png"
+                <header class="work-item-header">
+                    <figure class="work-img"><img src="assets/images/facebook-360.png"
                             alt="Project Tonic 2 Preview Image"></figure>
-                    <h3>Tonic</h3>
+                </header>
+                <main class="work-main">
+                    <h3>Facebook 360</h3>
                     <div class="project-info">
-                        <div class="project-client">CANOPY</div>
+                        <div class="project-client">FACEBOOK</div>
                         <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
                         <div class="project-info-text">Back End Dev</div>
                         <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
                         <div class="project-info-text">2015</div>
                     </div>
-                </header>
-                <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
-                    required.</p>
-                <ul class="work-categories">
-                    <li class="work-cat">html</li>
-                    <li class="work-cat">css</li>
-                    <li class="work-cat">javaScript</li>
-                </ul>
-                <footer>
+                    <p class="work-text">Exploring the future of media in Facebook's first Virtual Reality app; a place
+                        to
+                        discover and enjoy 360 photos and videos on Gear VR.</p>
+                    <ul class="work-categories">
+                        <li class="work-cat">html</li>
+                        <li class="work-cat only-desktop">Ruby on rails</li>
+                        <li class="work-cat">css</li>
+                        <li class="work-cat">javaScript</li>
+                    </ul>
                     <div><button class="see-project-button">See Project</button></div>
-                </footer>
+                </main>
             </article>
-            <article class="work-item">
-                <header>
-                    <figure class="work-img"><img src="assets/images/project-multi-post-2.png"
+            <article class="work-item order-1">
+                <header class="work-item-header">
+                    <figure class=" work-img"><img src="assets/images/uber-navigation.png"
                             alt="Project Multi Post 2 Preview Image"></figure>
-                    <h3>Multi-Post Stories</h3>
-                    <div class="project-info">
-                        <div class="project-client">CANOPY</div>
-                        <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
-                        <div class="project-info-text">Back End Dev</div>
-                        <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
-                        <div class="project-info-text">2015</div>
-                    </div>
                 </header>
-                <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
-                    required.</p>
-                <ul class="work-categories">
-                    <li class="work-cat">html</li>
-                    <li class="work-cat">css</li>
-                    <li class="work-cat">javaScript</li>
-                </ul>
-                <footer>
+                <main class="work-main">
+                    <h3>Uber Navigation</h3>
+                    <div class="project-info">
+                        <div class="project-client">Uber</div>
+                        <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
+                        <div class="project-info-text">Lead Developer</div>
+                        <div class="project-info-text"><i class="fa-solid fa-circle fa-2xs"></i></div>
+                        <div class="project-info-text">2018</div>
+                    </div>
+                    <p class="work-text">A daily selection of privately personalized reads; no accounts or sign-ups
+                        required.</p>
+                    <ul class="work-categories">
+                        <li class="work-cat">html</li>
+                        <li class="work-cat only-desktop">Ruby on rails</li>
+                        <li class="work-cat">css</li>
+                        <li class="work-cat">javaScript</li>
+                    </ul>
                     <div><button class="see-project-button">See Project</button></div>
-                </footer>
+                </main>
             </article>
         </section>
 
-        <section class="about-myself">
-            <h2>About Myself</h2>
-            <p class="main-normal-text">Hello I’m a software developer! I can help you build a product , feature or
-                website Look through some of my work and experience! If you like what you see and have a project you
-                need coded, don’t hestiate to contact me.</p>
-            <p class="social-media-title">LET'S CONNECT</p>
-            <ul class="social-media-icons">
-                <li>
-                    <a href="#" target="_blank"><i class="fa-solid fa-hand-peace"></i></a>
-                </li>
-                <li><a href="https://twitter.com/lmunozm" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/luis-munoz-manriquez/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-                <li><a href="https://github.com/lmunozm1702" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </li>
-                <li><a href="https://medium.com/@lmunozm1702" target="_blank"><i class="fa-brands fa-medium"></i></a>
-                </li>
-            </ul>
-            <div><button class="see-project-button">Get my resume</button></div>
+        <section id="a-about-myself" class="about-myself">
+            <main class="about-myself-main">
+                <h2>About Myself</h2>
+                <p class="main-normal-text">Hello I’m a software developer! I can help you build a product , feature or
+                    website Look through some of my work and experience! If you like what you see and have a project you
+                    need coded, don’t hestiate to contact me.</p>
+                <p class="social-media-title">LET'S CONNECT</p>
+                <ul class="social-media-icons no-bullets">
+                    <li>
+                        <a href="#" target="_blank"><i class="fa-solid fa-hand-peace fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/lmunozm" target="_blank"><i
+                                class="fa-brands fa-twitter fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/luis-munoz-manriquez/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://github.com/lmunozm1702" target="_blank"><i
+                                class="fa-brands fa-github fa-lg"></i></a>
+                    </li>
+                    <li><a href="https://medium.com/@lmunozm1702" target="_blank"><i
+                                class="fa-brands fa-medium fa-lg"></i></a>
+                    </li>
+                </ul>
+                <div><button class="see-project-button">Get my resume</button></div>
+            </main>
+            <aside class="about-myself-aside">
+                <div class="code-experience">
+                    <div class="list-header">
+                        <ul class="experience-nav">
+                            <li>Languages</li>
+                            <li><i class="fa-solid fa-angle-down"></i></i></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="experience-list">
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/javascript.png" alt="javaScript logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">JavaScript</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/html5.png" alt="HTML-5 logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">HTML</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/css.png" alt="CSS logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">CSS</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="code-experience">
-                <div class="list-header">
-                    <ul class="experience-nav">
-                        <li>Languajes</li>
-                        <li><i class="fa-solid fa-angle-down"></i></i></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/javascript.png" alt="javaScript logo">
-                            </div>
-                            <div>JavaScript</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/html5.png" alt="HTML-5 logo">
-                            </div>
-                            <div>HTML</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/css.png" alt="CSS logo">
-                            </div>
-                            <div>CSS</div>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="list-header">
+                        <ul class="experience-nav">
+                            <li>Frameworks</li>
+                            <li><i class="fa-solid fa-angle-down"></i></i></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="experience-list">
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/javascript.png" alt="javaScript logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">Rails</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/html5.png" alt="HTML-5 logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">React</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/css.png" alt="CSS logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">Bootstrap</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="list-header">
-                    <ul class="experience-nav">
-                        <li>Frameworks</li>
-                        <li><i class="fa-solid fa-angle-down"></i></i></li>
-                    </ul>
+                    <div class="list-header">
+                        <ul class="experience-nav">
+                            <li>Skills</li>
+                            <li><i class="fa-solid fa-angle-down"></i></i></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="experience-list">
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/javascript.png" alt="javaScript logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">JavaScript</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/html5.png" alt="HTML-5 logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">HTML</p>
+                                </div>
+                            </li>
+                            <li class="experience-item">
+                                <div class="experience-img">
+                                    <img src="assets/images/css.png" alt="CSS logo">
+                                </div>
+                                <div>
+                                    <p class="languaje-item">CSS</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/javascript.png" alt="javaScript logo">
-                            </div>
-                            <div>Rails</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/html5.png" alt="HTML-5 logo">
-                            </div>
-                            <div>React</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/css.png" alt="CSS logo">
-                            </div>
-                            <div>Bootstrap</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="list-header">
-                    <ul class="experience-nav">
-                        <li>Skills</li>
-                        <li><i class="fa-solid fa-angle-down"></i></i></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/javascript.png" alt="javaScript logo">
-                            </div>
-                            <div>Collaboration in group projects</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/html5.png" alt="HTML-5 logo">
-                            </div>
-                            <div>Git & GitHub and code reviews</div>
-                        </li>
-                        <li class="experience-item">
-                            <div>
-                                <img src="assets/images/css.png" alt="CSS logo">
-                            </div>
-                            <div>Tests & best practices </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+            </aside>
         </section>
         </div>
 
-        <section class="contact-me">
-            <h2>Contact me</h2>
-            <p>If you have an application you are interested in developing, a feature that you need built or a project
-                that needs coding. I’d love to help with it </p>
-            <form class="contact-me-form" action="https://formspree.io/f/xeqdgwjg" method="POST">
-                <label for="contact-fullname">Full Name:</label>
-                <input class="contact-me-text" id="contact-fullname" type="text" name="full-name" maxlength="30"
-                    placeholder="Full Name" required>
-                <label for="contact-email">Your email:</label>
-                <input class="contact-me-email" id="contact-email" type="email" name="email" placeholder="Email"
-                    required>
-                <label for="contact-message">Your message:</label>
-                <textarea class="contact-me-textarea" id="message" name="message" maxlength="500" rows="8"
-                    placeholder="Write your message here" required></textarea>
-                <div><button class="contact-me-submit" type="submit">Get in touch</button></div>
-                <hr>
-            </form>
+        <section id="a-contact-me" class="contact-me">
+            <header class="contact-me-header">
+                <h2>Contact me</h2>
+                <p>If you have an application you are interested in developing, a feature that you need built or a
+                    project
+                    that needs coding. I’d love to help with it </p>
+            </header>
+            <main class="contact-me-main">
+                <form class="contact-me-form" action="https://formspree.io/f/xeqdgwjg" method="POST">
+                    <label for="contact-fullname">Full Name:</label>
+                    <input class="contact-me-text" id="contact-fullname" type="text" name="full-name" maxlength="30"
+                        placeholder="Full Name" required>
+                    <label for="contact-email">Your email:</label>
+                    <input class="contact-me-email" id="contact-email" type="email" name="email" placeholder="Email"
+                        required>
+                    <label for="contact-message">Your message:</label>
+                    <textarea class="contact-me-textarea" id="message" name="message" maxlength="500" rows="8"
+                        placeholder="Write your message here" required></textarea>
+                    <div><button class="contact-me-submit" type="submit">Get in touch</button></div>
+                </form>
+            </main>
+            <footer class="contact-me-footer">
+                <img src="/assets/images/black-line.png" alt="End of the mobile version" />
+            </footer>
         </section>
     </main>
 </body>
