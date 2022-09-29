@@ -242,7 +242,7 @@ label {
     font-size: 1.111vw;
     line-height: 1.5;
   }
-
+}
 
 .social-media-icons {
   list-style: none;
@@ -588,6 +588,32 @@ label {
   background-position-x: right;
 }
 
+@media only screen and (min-width: 768px) {
+  .contact-me {
+    padding: 114px 22.222vw 8px 22.222vw;
+    background-image: url(/assets/images/contact-form-background-shape-desktop.png);
+    border-top-left-radius: 5.556vw;
+  }
+
+  .contact-me-header {
+    padding: 0;
+    margin: 12px 8.056vw;
+  }
+
+  .contact-me-main {
+    padding: 0;
+    margin: 12px 12.292vw;
+  }
+  .contact-me-footer {
+    padding: 0;
+    margin-bottom: 117px;
+  }
+
+  .contact-me-footer hr {
+    display: none;
+  }
+}
+
 .contact-me h2 {
   color: #fff;
   text-align: center;
@@ -603,6 +629,13 @@ label {
   color: #ebebff;
 }
 
+@media only screen and (min-width: 768px) {
+  .contact-me p {
+    font-size: 1.389vw;
+    line-height: 1.4;
+  }
+}
+
 .contact-me-text {
   margin-bottom: 20px;
   border-radius: 8px;
@@ -611,6 +644,14 @@ label {
   line-height: 20px;
   border: none;
   color: #172b4d;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-me-text {
+    border-radius: 0.556;
+    font-size: 1.181vw;
+    line-height: 1.18;
+  }
 }
 
 .contact-me-text textarea {
@@ -622,6 +663,13 @@ label {
   color: #172b4d;
 }
 
+@media only screen and (min-width: 768px) {
+  .contact-me-text textarea {
+    font-size: 1.042vw;
+    line-height: 1.6;
+  }
+}
+
 ::placeholder {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -630,6 +678,13 @@ label {
   line-height: 24px;
   color: #b3bac5;
   opacity: 1; /* Firefox */
+}
+
+@media only screen and (min-width: 768px) {
+  ::placeholder {
+    font-size: 1.042vw;
+    line-height: 1.6;
+  }
 }
 
 .contact-me-form {
@@ -647,6 +702,13 @@ label {
   color: #172b4d;
 }
 
+@media only screen and (min-width: 768px) {
+  .contact-me-email {
+    font-size: 1.181vw;
+    line-height: 1.18;
+  }
+}
+
 .contact-me-textarea {
   margin-bottom: 20px;
   border-radius: 8px;
@@ -657,6 +719,13 @@ label {
   color: #172b4d;
 }
 
+@media only screen and (min-width: 768px) {
+  .contact-me-textarea {
+    font-size: 1.181vw;
+    line-height: 1.18;
+  }
+}
+
 .contact-me-submit {
   color: #6070ff;
   padding: 12px 16px 12px 16px;
@@ -665,4 +734,12 @@ label {
   border-radius: 8px;
   border: none;
   margin-bottom: 11px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-me-text {
+    border-radius: 0.556;
+    font-size: 1.181vw;
+    line-height: 1.18;
+  }
 }
