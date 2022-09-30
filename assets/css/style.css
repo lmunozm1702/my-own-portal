@@ -58,32 +58,15 @@ h2:hover {
   transition-duration: 0.5s;
 }
 
-h3:hover {
-  transform: translate(32px, 10px);
-  transition-duration: 0.5s;
-}
-
-h3 {
-  transform: translate(0);
-  transition-duration: 0.5s;
-}
-
-h3:hover {
-  transform: translate(32px, 10px);
-  transition-duration: 0.5s;
-}
-
 p {
   transform: translate(0);
   transition-duration: 0.5s;
 }
 
-
 p:hover {
   transform: translate(32px, 10px);
   transition-duration: 0.5s;
 }
-
 
 @media only screen and (min-width: 768px) {
   h2 {
@@ -101,6 +84,13 @@ h3 {
   font-size: 8.533vw;
   line-height: 1.375;
   color: #172b4d;
+  transform: translate(0);
+  transition-duration: 0.5s;
+}
+
+h3:hover {
+  transform: translate(32px, 10px);
+  transition-duration: 0.5s;
 }
 
 @media only screen and (min-width: 768px) {
