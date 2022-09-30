@@ -125,7 +125,6 @@ button:hover {
     animation-iteration-count: infinite;
   }
 
-  /* Keyframes */
   @keyframes wiggle {
     0%,
     7% {
