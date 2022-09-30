@@ -11,7 +11,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
   transition-duration: 0.5s;
 }
 
@@ -58,32 +58,15 @@ h2:hover {
   transition-duration: 0.5s;
 }
 
-h3:hover {
-  transform: translate(32px, 10px);
-  transition-duration: 0.5s;
-}
-
-h3 {
-  transform: translate(0);
-  transition-duration: 0.5s;
-}
-
-h3:hover {
-  transform: translate(32px, 10px);
-  transition-duration: 0.5s;
-}
-
 p {
   transform: translate(0);
   transition-duration: 0.5s;
 }
 
-
 p:hover {
   transform: translate(32px, 10px);
   transition-duration: 0.5s;
 }
-
 
 @media only screen and (min-width: 768px) {
   h2 {
@@ -101,6 +84,13 @@ h3 {
   font-size: 8.533vw;
   line-height: 1.375;
   color: #172b4d;
+  transform: translate(0);
+  transition-duration: 0.5s;
+}
+
+h3:hover {
+  transform: translate(32px, 10px);
+  transition-duration: 0.5s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -117,6 +107,45 @@ button:hover {
   border-radius: 8px;
   color: #fff;
   border: 1px solid #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  button:hover {
+    animation: wiggle 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+
+    15% {
+      transform: rotateZ(-15deg);
+    }
+
+    20% {
+      transform: rotateZ(10deg);
+    }
+
+    25% {
+      transform: rotateZ(-10deg);
+    }
+
+    30% {
+      transform: rotateZ(6deg);
+    }
+
+    35% {
+      transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
 }
 
 button:active {
@@ -221,7 +250,7 @@ label {
   }
 
   .logo-placeholder img {
-    margin: 10px 0.833vw;
+    margin: 10px 0.832vw;
   }
 }
 
