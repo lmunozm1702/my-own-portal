@@ -13,7 +13,9 @@ The portal should allow recruiters and hiring managers to get a sense of what th
 - HTML
 - CSS
 
-## Live Demo (not available yet)
+## Live Demo
+
+https://lmunozm1702.github.io/my-own-portal/
 
 ## Getting Started
 
