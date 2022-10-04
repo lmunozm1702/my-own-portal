@@ -826,6 +826,10 @@ label {
   color: #172b4d;
 }
 
+.contact-me-email:focus {
+  background-color: #7a869a;
+}
+
 @media only screen and (min-width: 768px) {
   .contact-me-email {
     font-size: 1.181vw;
@@ -843,6 +847,10 @@ label {
   color: #172b4d;
 }
 
+.contact-me-textarea:focus {
+  background-color: #7a869a;
+}
+
 @media only screen and (min-width: 768px) {
   .contact-me-textarea {
     font-size: 1.181vw;
@@ -858,6 +866,10 @@ label {
   border-radius: 8px;
   border: none;
   margin-bottom: 11px;
+}
+
+.contact-me-text:focus {
+  background-color: #7a869a;
 }
 
 @media only screen and (min-width: 768px) {
