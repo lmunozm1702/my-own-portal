@@ -186,6 +186,29 @@ label {
   display: none;
 }
 
+.nav-right-text-open {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6070ff;
+  opacity: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right-text-open a {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     border: 1px solid #000;
@@ -219,6 +242,16 @@ label {
 
   .nav-right-hamburguer {
     display: none;
+  }
+
+  .nav-right-hamburguer a,
+  a:link,
+  a:active,
+  a:visited,
+  a:focus,
+  a:hover {
+    text-decoration: none;
+    color: color: #6070ff;
   }
 
   .nav-right-text {
