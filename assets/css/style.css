@@ -197,8 +197,8 @@ label {
   opacity: 95%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .nav-right-text-open a {
@@ -251,7 +251,7 @@ label {
   a:focus,
   a:hover {
     text-decoration: none;
-    color: color: #6070ff;
+    color: #6070ff;
   }
 
   .nav-right-text {
