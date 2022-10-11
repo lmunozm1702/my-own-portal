@@ -765,7 +765,7 @@ label {
 
 @media only screen and (min-width: 768px) {
   .contact-me-text {
-    border-radius: 0.556;
+    border-radius: 0.556vw;
     font-size: 1.181vw;
     line-height: 1.18;
   }
