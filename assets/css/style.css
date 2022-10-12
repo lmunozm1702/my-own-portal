@@ -1008,3 +1008,10 @@ label {
 .li-a i {
   margin-left: 10px;
 }
+
+.title-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
