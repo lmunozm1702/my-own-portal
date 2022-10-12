@@ -219,8 +219,28 @@ function cardPopupOpen(cardId, experienceId) {
 }
 
 function cardPopupClose(experienceId) {
-  console.log(experienceId)
   const cardPopupClose = document.querySelector("#container" + experienceId);
   cardPopupClose.classList.replace('card-popup', 'void-class');
+
+  const itemXwork = document.querySelector("#itemx" + experienceId);
+  itemXwork.classList.replace('item-x', 'hidden');
+
+  const articlePopup = document.querySelector("#" + experienceId);
+  articlePopup.classList.replace("work-item-popup", "work-item");
+
+  const headerPopup = document.querySelector("#header" + experienceId);
+  headerPopup.classList.replace("hidden", "work-item-header");
+
+  const textWork = document.querySelector("#text" + experienceId);
+  textWork.classList.replace("hidden", "work-text");
+
+  let seeButton = document.querySelector("#divseebutton" + experienceId);
+  seeButton.classList.replace("hidden", "void-class");
+
+  let itemSupportingText = document.querySelector("#support" + experienceId)
+  itemSupportingText.remove();
+
+  let divExtButton = document.querySelector("#divextbutton" + experienceId);
+  divExtButton.remove();
 }
 window.addEventListener('load', workCards(), false);
