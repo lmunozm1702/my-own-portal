@@ -2,7 +2,7 @@ import { experiences } from './static-data.js';
 
 const navBarOpen = document.querySelector('#navbar-h');
 navBarOpen.addEventListener('click', () => {
-  const navbarOptions = document.querySelector('#navbar - options');
+  const navbarOptions = document.querySelector('#navbar-options');
   navbarOptions.classList.replace('nav-right-text', 'nav-right-text-open');
 
   const closeIcon = document.querySelector('#close-icon-c');
@@ -48,8 +48,6 @@ function cardPopupOpen(cardId, experienceId) {
   const headerPopup = document.querySelector(`#header${experienceId}`);
   headerPopup.classList.replace('work-item-header', 'hidden');
 
-
-
   const figurePopup = document.querySelector(`#itemfig${experienceId}`);
 
   const textWork = document.querySelector(`#text${experienceId}`);
@@ -92,7 +90,7 @@ function cardPopupOpen(cardId, experienceId) {
   externalUl.className = 'external-ul';
   extButDiv.appendChild(externalUl);
 
-  cardId.links.forEach(link => {
+  cardId.links.forEach((link) => {
     const externalLi = document.createElement('li');
     externalLi.className = 'external-link-button';
     externalUl.appendChild(externalLi);
@@ -149,9 +147,8 @@ function cardPopupClose(experienceId) {
 function workCards() {
   let oddCard = 1;
 
-  Object.entries(experiences).forEach(x => {
+  Object.entries(experiences).forEach((x) => {
     const [experience, expData] = x;
-    console.log(experience)
     const cards = document.querySelector('#a-work-container');
 
     const popupContainer = document.createElement('div');
@@ -204,7 +201,7 @@ function workCards() {
 
     const itemX = document.createElement('div');
     itemX.className = 'hidden';
-    itemX.id = 'itemx' + experience;
+    itemX.id = `itemx${experience}`;
     titleDiv.appendChild(itemX);
 
     const itemXi = document.createElement('i');
@@ -216,7 +213,7 @@ function workCards() {
 
     const itemProInf = document.createElement('div');
     itemProInf.className = 'project-info';
-    itemProInf.id = 'proinf' + experience;
+    itemProInf.id = `proinf${experience}`;
     itemMain.appendChild(itemProInf);
 
     const itemProjectClient = document.createElement('div');
@@ -224,7 +221,7 @@ function workCards() {
     itemProjectClient.textContent = expData.projectClient;
     itemProInf.appendChild(itemProjectClient);
 
-    expData.projectInfo.forEach(project => {
+    expData.projectInfo.forEach((project) => {
       let ProjectInfoText = document.createElement('div');
       ProjectInfoText.className = 'project-info-text';
       itemProInf.appendChild(ProjectInfoText);
@@ -240,28 +237,28 @@ function workCards() {
     });
 
     const divInfoCard = document.createElement('div');
-    divInfoCard.id = 'divinfo' + experience;
+    divInfoCard.id = `divinfo${experience}`;
     divInfoCard.className = 'div-info';
     itemMain.appendChild(divInfoCard);
 
     const divInfoText = document.createElement('div');
-    divInfoText.id = 'divinfotext' + experience;
+    divInfoText.id = `divinfotext${experience}`;
     divInfoText.className = 'hidden';
     divInfoCard.appendChild(divInfoText);
 
     const divInfoButtons = document.createElement('div');
-    divInfoButtons.id = 'divinfobutton' + experience;
+    divInfoButtons.id = `divinfobutton${experience}`;
     divInfoButtons.className = 'div-info-button';
     divInfoCard.appendChild(divInfoButtons);
 
     const divInfoAttr = document.createElement('div');
-    divInfoAttr.id = 'divinfoattr' + experience;
+    divInfoAttr.id = `divinfoattr${experience}`;
     divInfoAttr.className = 'divinfoattr';
     divInfoButtons.appendChild(divInfoAttr);
 
     const MainP = document.createElement('p');
     MainP.className = 'work-text';
-    MainP.id = 'text' + experience;
+    MainP.id = `text${experience}`;
     MainP.textContent = expData.resume;
     divInfoAttr.appendChild(MainP);
 
@@ -269,7 +266,7 @@ function workCards() {
     workUl.className = 'work-categories';
     divInfoAttr.appendChild(workUl);
 
-    expData.languajes.forEach(languaje => {
+    expData.languajes.forEach((languaje) => {
       const workCat = document.createElement('li');
       workCat.className = 'work-cat';
       workCat.textContent = languaje;
@@ -278,7 +275,7 @@ function workCards() {
 
     const voidDiv = document.createElement('div');
     voidDiv.className = 'void-class';
-    voidDiv.id = 'divseebutton' + experience;
+    voidDiv.id = `divseebutton${experience}`;
     divInfoAttr.appendChild(voidDiv);
 
     const projectButton = document.createElement('button');
