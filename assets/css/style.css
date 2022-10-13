@@ -880,7 +880,7 @@ label {
 }
 
 .contact-me-email:focus {
-  background-color: #7a869a;
+  background-color: khaki;
 }
 
 @media only screen and (min-width: 768px) {
@@ -901,7 +901,7 @@ label {
 }
 
 .contact-me-textarea:focus {
-  background-color: #7a869a;
+  background-color: khaki;
 }
 
 @media only screen and (min-width: 768px) {
@@ -922,7 +922,7 @@ label {
 }
 
 .contact-me-text:focus {
-  background-color: #7a869a;
+  background-color: khaki;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1069,5 +1069,33 @@ label {
 
   .work-text {
     margin-top: 0;
+  }
+}
+
+.contact-error {
+  font-weight: 700;
+  font-size: 2.8vw;
+  line-height: 1.9;
+  align-self: flex-start;
+  background-color: rosybrown;
+  color: #fff;
+  opacity: 75%;
+  margin-bottom: 3px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-error {
+    font-weight: 700;
+    font-size: 1.2vw;
+    line-height: 1.9;
+    align-self: flex-start;
+    background-color: rosybrown;
+    color: #fff;
+    opacity: 75%;
+    margin-bottom: 3px;
+    padding: 2px 6px;
+    border-radius: 6px;
   }
 }

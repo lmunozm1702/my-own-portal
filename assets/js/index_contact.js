@@ -1,17 +1,36 @@
+const form = document.querySelector('#contactme');
+
 function validateEmail(email) {
-    if (email === email.LowerCase() ){
+    if (email.value.trim() === email.value.trim().toLowerCase()) {
         return true;
-    } 
+    }
     return false;
 }
 
-//const form = document.querySelector("#contact-button");
-const form = document.querySelector("#contactme");
-console.log(form)
+function setMessage(id, message, type) {
+    const divId = document.querySelector(`#${id}`);
 
-form.addEventListener("click", function (event) {
+    const errorDiv = document.createElement('div');
+    errorDiv.id = `${id}-error-message`;
+    errorDiv.className = `contact-${type}`;
+    errorDiv.textContent = `${message}`;
+
+    form.insertBefore(errorDiv, divId);
+}
+
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    console.log(validateEmail('lmunozm1702@gmail.com'));
-    console.log(validateEmail('l.Munoz.m@outlook.com'));
+    let errorDiv = document.querySelector('#contact-email-error-message');
+
+    if (errorDiv) {
+        errorDiv.remove();
+    }
+
+    if (!validateEmail(form.elements['contact-email'])) {
+        setMessage('contact-email', 'Ooops!, please write your email in lowercase!', 'error');
+    }
+    else {
+        form.submit();
+    };
 });
