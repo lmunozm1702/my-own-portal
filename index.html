@@ -209,7 +209,7 @@
                     that needs coding. I’d love to help with it </p>
             </header>
             <main class="contact-me-main">
-                <form class="contact-me-form" action="https://formspree.io/f/xeqdgwjg" method="POST">
+                <form id="contactme" class="contact-me-form" action="https://formspree.io/f/xeqdgwjg" method="POST">
                     <label for="contact-fullname">Full Name:</label>
                     <input class="contact-me-text" id="contact-fullname" type="text" name="full-name" maxlength="30"
                         placeholder="Full Name*" required>
@@ -219,7 +219,9 @@
                     <label for="contact-message">Your message:</label>
                     <textarea class="contact-me-textarea" id="message" name="message" maxlength="500" rows="8"
                         placeholder="Write your message here*" required></textarea>
-                    <div><button class="contact-me-submit" type="submit">Get in touch</button></div>
+                    <div id="div-contact-button">
+                        <button id="contact-button" class="contact-me-submit" type="submit">Get in touch</button>
+                    </div>
                 </form>
             </main>
             <footer class="contact-me-footer">
@@ -228,6 +230,7 @@
         </section>
     </main>
     <script type="module" src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/index_contact.js"></script>
 </body>
 
 </html>
