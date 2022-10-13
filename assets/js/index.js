@@ -48,7 +48,7 @@ function cardPopupOpen(cardId, experienceId) {
   const headerPopup = document.querySelector(`#header${experienceId}`);
   headerPopup.classList.replace('work-item-header', 'hidden');
 
-  const projectInfoPopup = document.querySelector(`#proinf${experienceId}`);
+
 
   const figurePopup = document.querySelector(`#itemfig${experienceId}`);
 
@@ -56,7 +56,7 @@ function cardPopupOpen(cardId, experienceId) {
 
   const itemMain = document.querySelector(`#itemmain${experienceId}`);
   const divInfoWork = document.querySelector(`#divinfo${experienceId}`);
-  itemMain.insertBefore(figurePopup, divInfoWork)
+  itemMain.insertBefore(figurePopup, divInfoWork);
 
   const divInfoText = document.querySelector(`#divinfotext${experienceId}`);
 
@@ -93,7 +93,6 @@ function cardPopupOpen(cardId, experienceId) {
   extButDiv.appendChild(externalUl);
 
   cardId.links.forEach(link => {
-
     const externalLi = document.createElement('li');
     externalLi.className = 'external-link-button';
     externalUl.appendChild(externalLi);
@@ -149,7 +148,10 @@ function cardPopupClose(experienceId) {
 
 function workCards() {
   let oddCard = 1;
-  for (const experience in experiences) {
+
+  Object.entries(experiences).forEach(x => {
+    const [experience, expData] = x;
+    console.log(experience)
     const cards = document.querySelector('#a-work-container');
 
     const popupContainer = document.createElement('div');
@@ -177,8 +179,8 @@ function workCards() {
     itemHeader.appendChild(itemFigure);
 
     const itemImg = document.createElement('img');
-    itemImg.src = experiences[experience].image;
-    itemImg.alt = experiences[experience].imageAlt;
+    itemImg.src = expData.image;
+    itemImg.alt = expData.imageAlt;
     itemFigure.appendChild(itemImg);
 
     const itemMain = document.createElement('main');
@@ -197,7 +199,7 @@ function workCards() {
     titleDiv.appendChild(h3Div);
 
     const itemH3 = document.createElement('H3');
-    itemH3.textContent = experiences[experience].title;
+    itemH3.textContent = expData.title;
     h3Div.appendChild(itemH3);
 
     const itemX = document.createElement('div');
@@ -219,10 +221,10 @@ function workCards() {
 
     const itemProjectClient = document.createElement('div');
     itemProjectClient.className = 'project-client';
-    itemProjectClient.textContent = experiences[experience].projectClient;
+    itemProjectClient.textContent = expData.projectClient;
     itemProInf.appendChild(itemProjectClient);
 
-    experiences[experience].projectInfo.forEach(project => {
+    expData.projectInfo.forEach(project => {
       let ProjectInfoText = document.createElement('div');
       ProjectInfoText.className = 'project-info-text';
       itemProInf.appendChild(ProjectInfoText);
@@ -260,14 +262,14 @@ function workCards() {
     const MainP = document.createElement('p');
     MainP.className = 'work-text';
     MainP.id = 'text' + experience;
-    MainP.textContent = experiences[experience].resume;
+    MainP.textContent = expData.resume;
     divInfoAttr.appendChild(MainP);
 
     const workUl = document.createElement('ul');
     workUl.className = 'work-categories';
     divInfoAttr.appendChild(workUl);
 
-    experiences[experience].languajes.forEach(languaje => {
+    expData.languajes.forEach(languaje => {
       const workCat = document.createElement('li');
       workCat.className = 'work-cat';
       workCat.textContent = languaje;
@@ -283,10 +285,10 @@ function workCards() {
     projectButton.className = 'see-project-button';
     projectButton.textContent = 'See Project';
     projectButton.onclick = function () {
-      cardPopupOpen(experiences[experience], experience);
+      cardPopupOpen(expData, experience);
     };
     voidDiv.appendChild(projectButton);
-  }
+  });
 }
 
 window.addEventListener('load', workCards(), false);
