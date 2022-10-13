@@ -1,4 +1,4 @@
-export const experiences = {
+const experiences = ({
   work1: {
     title: 'Tonic',
     projectClient: 'CANOPY',
@@ -51,4 +51,6 @@ export const experiences = {
     link2live: 'https://www.google.com',
     link2source: 'https://github.com/lmunozm1702/my-own-portal',
   },
-};
+});
+
+export default experiences;

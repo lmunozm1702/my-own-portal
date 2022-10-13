@@ -1,4 +1,4 @@
-import { experiences } from './static-data.js';
+import experiences from './static-data.js';
 
 const navBarOpen = document.querySelector('#navbar-h');
 navBarOpen.addEventListener('click', () => {
