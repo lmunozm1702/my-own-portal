@@ -21,7 +21,7 @@ function setMessage(id, message, type) {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const setBefore = 'div-contact-button'
+  const setBefore = 'div-contact-button';
   const errorDiv = document.querySelector(`#${setBefore}-error-message`);
 
   if (errorDiv) {
