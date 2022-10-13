@@ -21,14 +21,15 @@ function setMessage(id, message, type) {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const errorDiv = document.querySelector('#contact-email-error-message');
+  const setBefore = 'div-contact-button'
+  const errorDiv = document.querySelector(`#${setBefore}-error-message`);
 
   if (errorDiv) {
     errorDiv.remove();
   }
 
   if (!validateEmail(form.elements['contact-email'])) {
-    setMessage('contact-email', 'Ooops!, please write your email in lowercase!', 'error');
+    setMessage(setBefore, 'Ooops!, please write your email in lowercase!', 'error');
   } else {
     form.submit();
   }

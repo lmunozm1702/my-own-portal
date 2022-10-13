@@ -1076,11 +1076,11 @@ label {
   font-weight: 700;
   font-size: 2.8vw;
   line-height: 1.9;
-  align-self: flex-start;
+  align-self: center;
   background-color: rosybrown;
   color: #fff;
   opacity: 75%;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   padding: 2px 6px;
   border-radius: 6px;
 }
@@ -1090,11 +1090,11 @@ label {
     font-weight: 700;
     font-size: 1.2vw;
     line-height: 1.9;
-    align-self: flex-start;
+    align-self: center;
     background-color: rosybrown;
     color: #fff;
     opacity: 75%;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     padding: 2px 6px;
     border-radius: 6px;
   }
