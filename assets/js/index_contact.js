@@ -18,7 +18,7 @@ function setMessage(id, message, type) {
   form.insertBefore(errorDiv, divId);
 }
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const errorDiv = document.querySelector('#contact-email-error-message');
@@ -31,5 +31,5 @@ form.addEventListener('submit', event => {
     setMessage('contact-email', 'Ooops!, please write your email in lowercase!', 'error');
   } else {
     form.submit();
-  };
-})
+  }
+});
