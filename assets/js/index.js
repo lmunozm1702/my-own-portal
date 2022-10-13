@@ -2,7 +2,7 @@ import { experiences } from './static-data.js';
 
 const navBarOpen = document.querySelector('#navbar-h');
 navBarOpen.addEventListener('click', () => {
-  const navbarOptions = document.querySelector('#navbar-options');
+  const navbarOptions = document.querySelector('#navbar - options');
   navbarOptions.classList.replace('nav-right-text', 'nav-right-text-open');
 
   const closeIcon = document.querySelector('#close-icon-c');
@@ -36,46 +36,46 @@ sectionContactClose.addEventListener('click', () => {
 });
 
 function cardPopupOpen(cardId, experienceId) {
-  const cardPopupOpen = document.querySelector('#container' + experienceId);
+  const cardPopupOpen = document.querySelector(`#container${experienceId}`);
   cardPopupOpen.classList.replace('void-class', 'card-popup');
 
-  const itemXwork = document.querySelector('#itemx' + experienceId);
+  const itemXwork = document.querySelector(`#itemx${experienceId}`);
   itemXwork.classList.replace('hidden', 'item-x');
 
-  const articlePopup = document.querySelector('#' + experienceId);
+  const articlePopup = document.querySelector(`#${experienceId}`);
   articlePopup.classList.replace('work-item', 'work-item-popup');
 
-  const headerPopup = document.querySelector('#header' + experienceId);
+  const headerPopup = document.querySelector(`#header${experienceId}`);
   headerPopup.classList.replace('work-item-header', 'hidden');
 
-  const projectInfoPopup = document.querySelector('#proinf' + experienceId);
+  const projectInfoPopup = document.querySelector(`#proinf${experienceId}`);
 
-  const figurePopup = document.querySelector('#itemfig' + experienceId)
+  const figurePopup = document.querySelector(`#itemfig${experienceId}`)
 
-  const textWork = document.querySelector('#text' + experienceId);
+  const textWork = document.querySelector(`#text${experienceId}`);
 
-  const itemMain = document.querySelector('#itemmain' + experienceId);
-  let divInfoWork = document.querySelector('#divinfo' + experienceId);
+  const itemMain = document.querySelector(`#itemmain${experienceId}`);
+  let divInfoWork = document.querySelector(`#divinfo${experienceId}`);
   itemMain.insertBefore(figurePopup, divInfoWork)
 
-  let divInfoText = document.querySelector('#divinfotext' + experienceId)
+  let divInfoText = document.querySelector(`#divinfotext${experienceId}`)
 
   let itemSupportingText = document.createElement('p');
   itemSupportingText.className = 'supporting-text';
-  itemSupportingText.id = 'support' + experienceId;
+  itemSupportingText.id = `support${experienceId}`;
   itemSupportingText.textContent = cardId.supportingText;
   divInfoText.appendChild(itemSupportingText);
 
   divInfoText.classList.replace('hidden', 'work-text');
   textWork.classList.replace('work-text', 'hidden');
 
-  let seeButton = document.querySelector('#divseebutton' + experienceId);
+  let seeButton = document.querySelector(`#divseebutton${experienceId}`);
   seeButton.classList.replace('void-class', 'hidden');
 
-  let divInfoButtons = document.querySelector('#divinfobutton' + experienceId);
+  let divInfoButtons = document.querySelector(`#divinfobutton${experienceId}`);
 
   let greyLineDiv = document.createElement('div')
-  greyLineDiv.id = 'greylinediv' + experienceId;
+  greyLineDiv.id = `greylinediv${experienceId}`;
   divInfoButtons.appendChild(greyLineDiv);
 
   let greyLine = document.createElement('img');
@@ -85,7 +85,7 @@ function cardPopupOpen(cardId, experienceId) {
 
   let extButDiv = document.createElement('div');
   extButDiv.className = 'void-class';
-  extButDiv.id = 'divextbutton' + experienceId;
+  extButDiv.id = `divextbutton${experienceId}`;
   divInfoButtons.appendChild(extButDiv);
 
   let externalUl = document.createElement('ul');
@@ -111,42 +111,42 @@ function cardPopupOpen(cardId, experienceId) {
 }
 
 function cardPopupClose(experienceId) {
-  const cardPopupClose = document.querySelector('#container' + experienceId);
+  const cardPopupClose = document.querySelector(`#container${experienceId}`);
   cardPopupClose.classList.replace('card-popup', 'void-class');
 
-  const itemXwork = document.querySelector('#itemx' + experienceId);
+  const itemXwork = document.querySelector(`#itemx${experienceId}`);
   itemXwork.classList.replace('item-x', 'hidden');
 
-  const articlePopup = document.querySelector('#' + experienceId);
+  const articlePopup = document.querySelector(`#${experienceId}`);
   articlePopup.classList.replace('work-item-popup', 'work-item');
 
-  const headerPopup = document.querySelector('#header' + experienceId);
+  const headerPopup = document.querySelector(`#header${experienceId}`);
   headerPopup.classList.replace('hidden', 'work-item-header');
 
-  const textWork = document.querySelector('#text' + experienceId);
+  const textWork = document.querySelector(`#text${experienceId}`);
   textWork.classList.replace('hidden', 'work-text');
 
-  let seeButton = document.querySelector('#divseebutton' + experienceId);
+  let seeButton = document.querySelector(`#divseebutton${experienceId}`);
   seeButton.classList.replace('hidden', 'void-class');
 
-  let divInfoText = document.querySelector('#divinfotext' + experienceId);
+  let divInfoText = document.querySelector(`#divinfotext${experienceId}`);
   divInfoText.classList.replace('work-text', 'hidden');
 
-  let itemSupportingText = document.querySelector('#support' + experienceId)
+  let itemSupportingText = document.querySelector(`#support${experienceId}`)
   itemSupportingText.remove();
 
-  let divExtButton = document.querySelector('#divextbutton' + experienceId);
+  let divExtButton = document.querySelector(`#divextbutton${experienceId}`);
   divExtButton.remove();
 
-  const figurePopup = document.querySelector('#itemfig' + experienceId)
-  const headerWork = document.querySelector('#header' + experienceId)
+  const figurePopup = document.querySelector(`#itemfig${experienceId}`)
+  const headerWork = document.querySelector(`#header${experienceId}`)
   headerWork.appendChild(figurePopup);
 
-  let greyLine = document.querySelector('#greylinediv' + experienceId);
+  let greyLine = document.querySelector(`#greylinediv${experienceId}`);
   greyLine.remove();
 }
-window.addEventListener('load', workCards(), false);
 
+window.addEventListener('load', workCards(), false);
 
 function workCards() {
   let oddCard = 1;
@@ -155,7 +155,7 @@ function workCards() {
 
     const popupContainer = document.createElement('div');
     popupContainer.classList = 'void-class';
-    popupContainer.id = 'container${experience}';
+    popupContainer.id = `container${experience}`;
     cards.appendChild(popupContainer);
 
     const itemArticle = document.createElement('article');
@@ -169,12 +169,12 @@ function workCards() {
 
     const itemHeader = document.createElement('header');
     itemHeader.className = 'work-item-header';
-    itemHeader.id = 'header${experience}';
+    itemHeader.id = `header${experience}`;
     itemArticle.appendChild(itemHeader);
 
     const itemFigure = document.createElement('figure');
     itemFigure.className = 'work-img';
-    itemFigure.id = 'itemfig${experience}';
+    itemFigure.id = `itemfig${experience}`;
     itemHeader.appendChild(itemFigure);
 
     const itemImg = document.createElement('img');
@@ -184,17 +184,17 @@ function workCards() {
 
     const itemMain = document.createElement('main');
     itemMain.className = 'work-main';
-    itemMain.id = 'itemmain${experience}';
+    itemMain.id = `itemmain${experience}`;
     itemArticle.appendChild(itemMain);
 
     const titleDiv = document.createElement('div');
     titleDiv.className = 'title-div';
-    titleDiv.id = 'titlediv${experience}';
+    titleDiv.id = `titlediv${experience}`;
     itemMain.appendChild(titleDiv);
 
     const h3Div = document.createElement('div');
     h3Div.class = 'h3-div';
-    h3Div.id = 'h3div${experience}';
+    h3Div.id = `h3div${experience}`;
     titleDiv.appendChild(h3Div);
 
     const itemH3 = document.createElement('H3');
