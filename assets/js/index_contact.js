@@ -1,5 +1,8 @@
 function validateEmail(email) {
-    return true;
+    if (email === email.LowerCase() ){
+        return true;
+    } 
+    return false;
 }
 
 //const form = document.querySelector("#contact-button");
