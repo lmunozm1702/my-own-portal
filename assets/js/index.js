@@ -106,8 +106,6 @@ function workCards() {
     itemProInf.id = "proinf" + experience;
     itemMain.appendChild(itemProInf);
 
-
-
     let itemProjectClient = document.createElement("div");
     itemProjectClient.className = "project-client";
     itemProjectClient.textContent = experiences[experience].projectClient;
@@ -210,9 +208,6 @@ function cardPopupOpen(cardId, experienceId) {
   itemSupportingText.id = "support" + experienceId;
   itemSupportingText.textContent = cardId.supportingText;
   divInfoText.appendChild(itemSupportingText);
-  //itemMain.insertBefore(itemSupportingText, textWork);
-
-
 
   divInfoText.classList.replace("hidden", "work-text");
   textWork.classList.replace("work-text", "hidden");
