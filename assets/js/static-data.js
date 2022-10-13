@@ -1,4 +1,4 @@
-port const experiences = {
+export const experiences = {
   work1: {
     title: 'Tonic',
     projectClient: 'CANOPY',
