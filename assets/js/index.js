@@ -106,6 +106,8 @@ function workCards() {
     itemProInf.id = "proinf" + experience;
     itemMain.appendChild(itemProInf);
 
+
+
     let itemProjectClient = document.createElement("div");
     itemProjectClient.className = "project-client";
     itemProjectClient.textContent = experiences[experience].projectClient;
@@ -126,15 +128,35 @@ function workCards() {
       itemProInf.appendChild(ProjectInfoText);
     });
 
+    let divInfoCard = document.createElement("div");
+    divInfoCard.id = "divinfo" + experience;
+    divInfoCard.className = "div-info";
+    itemMain.appendChild(divInfoCard);
+
+    let divInfoText = document.createElement("div");
+    divInfoText.id = "divinfotext" + experience;
+    divInfoText.className = "hidden";
+    divInfoCard.appendChild(divInfoText);
+
+    let divInfoButtons = document.createElement("div");
+    divInfoButtons.id = "divinfobutton" + experience;
+    divInfoButtons.className = "div-info-button"
+    divInfoCard.appendChild(divInfoButtons);
+
+    let divInfoAttr = document.createElement("div");
+    divInfoAttr.id = "divinfoattr" + experience;
+    divInfoAttr.className = "divinfoattr";
+    divInfoButtons.appendChild(divInfoAttr);
+
     let MainP = document.createElement("p")
     MainP.className = "work-text";
     MainP.id = "text" + experience;
     MainP.textContent = experiences[experience].resume;
-    itemMain.appendChild(MainP);
+    divInfoAttr.appendChild(MainP);
 
     let workUl = document.createElement("ul")
     workUl.className = "work-categories";
-    itemMain.appendChild(workUl);
+    divInfoAttr.appendChild(workUl);
 
     experiences[experience].languajes.forEach(languaje => {
       let workCat = document.createElement("li");
@@ -146,7 +168,7 @@ function workCards() {
     let voidDiv = document.createElement("div");
     voidDiv.className = "void-class";
     voidDiv.id = "divseebutton" + experience;
-    itemMain.appendChild(voidDiv);
+    divInfoAttr.appendChild(voidDiv);
 
     let projectButton = document.createElement("button");
     projectButton.className = "see-project-button";
@@ -178,23 +200,41 @@ function cardPopupOpen(cardId, experienceId) {
   const textWork = document.querySelector("#text" + experienceId);
 
   const itemMain = document.querySelector("#itemmain" + experienceId);
-  itemMain.insertBefore(figurePopup, textWork)
+  let divInfoWork = document.querySelector("#divinfo" + experienceId);
+  itemMain.insertBefore(figurePopup, divInfoWork)
+
+  let divInfoText = document.querySelector("#divinfotext" + experienceId)
 
   let itemSupportingText = document.createElement("p");
   itemSupportingText.className = "supporting-text";
   itemSupportingText.id = "support" + experienceId;
   itemSupportingText.textContent = cardId.supportingText;
-  itemMain.insertBefore(itemSupportingText, textWork);
+  divInfoText.appendChild(itemSupportingText);
+  //itemMain.insertBefore(itemSupportingText, textWork);
 
+
+
+  divInfoText.classList.replace("hidden", "work-text");
   textWork.classList.replace("work-text", "hidden");
 
   let seeButton = document.querySelector("#divseebutton" + experienceId);
   seeButton.classList.replace("void-class", "hidden");
 
+  let divInfoButtons = document.querySelector("#divinfobutton" + experienceId);
+
+  let greyLineDiv = document.createElement("div")
+  greyLineDiv.id = "greylinediv" + experienceId;
+  divInfoButtons.appendChild(greyLineDiv);
+
+  let greyLine = document.createElement("img");
+  greyLine.classList = "grey-line"
+  greyLine.src = "assets/images/grey-line.png"
+  greyLineDiv.appendChild(greyLine);
+
   let extButDiv = document.createElement("div");
   extButDiv.className = "void-class";
   extButDiv.id = "divextbutton" + experienceId;
-  itemMain.appendChild(extButDiv);
+  divInfoButtons.appendChild(extButDiv);
 
   let externalUl = document.createElement("ul");
   externalUl.className = "external-ul";
@@ -237,10 +277,20 @@ function cardPopupClose(experienceId) {
   let seeButton = document.querySelector("#divseebutton" + experienceId);
   seeButton.classList.replace("hidden", "void-class");
 
+  let divInfoText = document.querySelector("#divinfotext" + experienceId);
+  divInfoText.classList.replace("work-text", "hidden");
+
   let itemSupportingText = document.querySelector("#support" + experienceId)
   itemSupportingText.remove();
 
   let divExtButton = document.querySelector("#divextbutton" + experienceId);
   divExtButton.remove();
+
+  const figurePopup = document.querySelector("#itemfig" + experienceId)
+  const headerWork = document.querySelector("#header" + experienceId)
+  headerWork.appendChild(figurePopup);
+
+  let greyLine = document.querySelector("#greylinediv" + experienceId);
+  greyLine.remove();
 }
 window.addEventListener('load', workCards(), false);
