@@ -50,17 +50,17 @@ function cardPopupOpen(cardId, experienceId) {
 
   const projectInfoPopup = document.querySelector(`#proinf${experienceId}`);
 
-  const figurePopup = document.querySelector(`#itemfig${experienceId}`)
+  const figurePopup = document.querySelector(`#itemfig${experienceId}`);
 
   const textWork = document.querySelector(`#text${experienceId}`);
 
   const itemMain = document.querySelector(`#itemmain${experienceId}`);
-  let divInfoWork = document.querySelector(`#divinfo${experienceId}`);
+  const divInfoWork = document.querySelector(`#divinfo${experienceId}`);
   itemMain.insertBefore(figurePopup, divInfoWork)
 
-  let divInfoText = document.querySelector(`#divinfotext${experienceId}`)
+  const divInfoText = document.querySelector(`#divinfotext${experienceId}`);
 
-  let itemSupportingText = document.createElement('p');
+  const itemSupportingText = document.createElement('p');
   itemSupportingText.className = 'supporting-text';
   itemSupportingText.id = `support${experienceId}`;
   itemSupportingText.textContent = cardId.supportingText;
@@ -69,43 +69,44 @@ function cardPopupOpen(cardId, experienceId) {
   divInfoText.classList.replace('hidden', 'work-text');
   textWork.classList.replace('work-text', 'hidden');
 
-  let seeButton = document.querySelector(`#divseebutton${experienceId}`);
+  const seeButton = document.querySelector(`#divseebutton${experienceId}`);
   seeButton.classList.replace('void-class', 'hidden');
 
-  let divInfoButtons = document.querySelector(`#divinfobutton${experienceId}`);
+  const divInfoButtons = document.querySelector(`#divinfobutton${experienceId}`);
 
-  let greyLineDiv = document.createElement('div')
+  const greyLineDiv = document.createElement('div');
   greyLineDiv.id = `greylinediv${experienceId}`;
   divInfoButtons.appendChild(greyLineDiv);
 
-  let greyLine = document.createElement('img');
-  greyLine.classList = 'grey-line'
-  greyLine.src = 'assets/images/grey-line.png'
+  const greyLine = document.createElement('img');
+  greyLine.classList = 'grey-line';
+  greyLine.src = 'assets/images/grey-line.png';
   greyLineDiv.appendChild(greyLine);
 
-  let extButDiv = document.createElement('div');
+  const extButDiv = document.createElement('div');
   extButDiv.className = 'void-class';
   extButDiv.id = `divextbutton${experienceId}`;
   divInfoButtons.appendChild(extButDiv);
 
-  let externalUl = document.createElement('ul');
+  const externalUl = document.createElement('ul');
   externalUl.className = 'external-ul';
   extButDiv.appendChild(externalUl);
 
   cardId.links.forEach(link => {
-    //console.log(link);
-    let externalLi = document.createElement('li');
+
+    const externalLi = document.createElement('li');
     externalLi.className = 'external-link-button';
     externalUl.appendChild(externalLi);
 
-    let liA = document.createElement('a');
-    liA.textContent = link[0];
-    liA.href = link[1];
-    liA.className = 'li-a'
+    const [textContent, textHref, textIcon] = link;
+    const liA = document.createElement('a');
+    liA.textContent = textContent;
+    liA.href = textHref;
+    liA.className = 'li-a';
     externalLi.appendChild(liA);
 
-    let liI = document.createElement('i');
-    liI.className = link[2];
+    const liI = document.createElement('i');
+    liI.className = textIcon;
     liA.appendChild(liI);
   });
 }
@@ -126,27 +127,25 @@ function cardPopupClose(experienceId) {
   const textWork = document.querySelector(`#text${experienceId}`);
   textWork.classList.replace('hidden', 'work-text');
 
-  let seeButton = document.querySelector(`#divseebutton${experienceId}`);
+  const seeButton = document.querySelector(`#divseebutton${experienceId}`);
   seeButton.classList.replace('hidden', 'void-class');
 
-  let divInfoText = document.querySelector(`#divinfotext${experienceId}`);
+  const divInfoText = document.querySelector(`#divinfotext${experienceId}`);
   divInfoText.classList.replace('work-text', 'hidden');
 
-  let itemSupportingText = document.querySelector(`#support${experienceId}`)
+  const itemSupportingText = document.querySelector(`#support${experienceId}`);
   itemSupportingText.remove();
 
-  let divExtButton = document.querySelector(`#divextbutton${experienceId}`);
+  const divExtButton = document.querySelector(`#divextbutton${experienceId}`);
   divExtButton.remove();
 
-  const figurePopup = document.querySelector(`#itemfig${experienceId}`)
-  const headerWork = document.querySelector(`#header${experienceId}`)
+  const figurePopup = document.querySelector(`#itemfig${experienceId}`);
+  const headerWork = document.querySelector(`#header${experienceId}`);
   headerWork.appendChild(figurePopup);
 
-  let greyLine = document.querySelector(`#greylinediv${experienceId}`);
+  const greyLine = document.querySelector(`#greylinediv${experienceId}`);
   greyLine.remove();
 }
-
-window.addEventListener('load', workCards(), false);
 
 function workCards() {
   let oddCard = 1;
@@ -206,19 +205,19 @@ function workCards() {
     itemX.id = 'itemx' + experience;
     titleDiv.appendChild(itemX);
 
-    let itemXi = document.createElement('i');
+    const itemXi = document.createElement('i');
     itemXi.className = 'fa-solid fa-xmark';
     itemXi.onclick = function () {
       cardPopupClose(experience);
     };
     itemX.appendChild(itemXi);
 
-    let itemProInf = document.createElement('div');
+    const itemProInf = document.createElement('div');
     itemProInf.className = 'project-info';
     itemProInf.id = 'proinf' + experience;
     itemMain.appendChild(itemProInf);
 
-    let itemProjectClient = document.createElement('div');
+    const itemProjectClient = document.createElement('div');
     itemProjectClient.className = 'project-client';
     itemProjectClient.textContent = experiences[experience].projectClient;
     itemProInf.appendChild(itemProjectClient);
@@ -228,7 +227,7 @@ function workCards() {
       ProjectInfoText.className = 'project-info-text';
       itemProInf.appendChild(ProjectInfoText);
 
-      let ProjectInfoTextI = document.createElement('i');
+      const ProjectInfoTextI = document.createElement('i');
       ProjectInfoTextI.className = 'fa-solid fa-circle fa-2xs';
       ProjectInfoText.appendChild(ProjectInfoTextI);
 
@@ -238,49 +237,49 @@ function workCards() {
       itemProInf.appendChild(ProjectInfoText);
     });
 
-    let divInfoCard = document.createElement('div');
+    const divInfoCard = document.createElement('div');
     divInfoCard.id = 'divinfo' + experience;
     divInfoCard.className = 'div-info';
     itemMain.appendChild(divInfoCard);
 
-    let divInfoText = document.createElement('div');
+    const divInfoText = document.createElement('div');
     divInfoText.id = 'divinfotext' + experience;
     divInfoText.className = 'hidden';
     divInfoCard.appendChild(divInfoText);
 
-    let divInfoButtons = document.createElement('div');
+    const divInfoButtons = document.createElement('div');
     divInfoButtons.id = 'divinfobutton' + experience;
-    divInfoButtons.className = 'div-info-button'
+    divInfoButtons.className = 'div-info-button';
     divInfoCard.appendChild(divInfoButtons);
 
-    let divInfoAttr = document.createElement('div');
+    const divInfoAttr = document.createElement('div');
     divInfoAttr.id = 'divinfoattr' + experience;
     divInfoAttr.className = 'divinfoattr';
     divInfoButtons.appendChild(divInfoAttr);
 
-    let MainP = document.createElement('p')
+    const MainP = document.createElement('p');
     MainP.className = 'work-text';
     MainP.id = 'text' + experience;
     MainP.textContent = experiences[experience].resume;
     divInfoAttr.appendChild(MainP);
 
-    let workUl = document.createElement('ul')
+    const workUl = document.createElement('ul');
     workUl.className = 'work-categories';
     divInfoAttr.appendChild(workUl);
 
     experiences[experience].languajes.forEach(languaje => {
-      let workCat = document.createElement('li');
+      const workCat = document.createElement('li');
       workCat.className = 'work-cat';
       workCat.textContent = languaje;
       workUl.appendChild(workCat);
     });
 
-    let voidDiv = document.createElement('div');
+    const voidDiv = document.createElement('div');
     voidDiv.className = 'void-class';
     voidDiv.id = 'divseebutton' + experience;
     divInfoAttr.appendChild(voidDiv);
 
-    let projectButton = document.createElement('button');
+    const projectButton = document.createElement('button');
     projectButton.className = 'see-project-button';
     projectButton.textContent = 'See Project';
     projectButton.onclick = function () {
@@ -290,3 +289,4 @@ function workCards() {
   }
 }
 
+window.addEventListener('load', workCards(), false);
