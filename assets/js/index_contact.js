@@ -32,7 +32,17 @@ function updateStoredData(field, value, data) {
 function setDataFromStorage(event) {
   if (!localStorageAvailable) { return false }
   //Here Update the formfields with stored data
+  let savedData = localStorage.getItem('contactFormSavedData');
+  console.log(savedData);
 
+  let fullName = document.querySelector('contact-fullname');
+  fullName.value = savedData['contact-fullname'];
+
+  let contactEmail = document.querySelector('contact-email');
+  contactEmail.value = savedData['contact-email'];
+
+  let contactMessage = document.querySelector('contact-message');
+  contactMessage.value = savedData['contact-message'];
   // Ends Here
   contactFields.forEach((field) => {
     form[field].addEventListener('input', event => {
