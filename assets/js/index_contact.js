@@ -2,11 +2,6 @@ const form = document.querySelector('#contactme');
 
 //Save contact form data into local storage.
 const contactFields = ['contact-fullname', 'contact-email', 'contact-message'];
-const formData = {
-  'contact-fullname': '',
-  'contact-email': '',
-  'contact-message': ''
-}
 
 function localStorageAvailable() {
   let storage;
@@ -23,31 +18,29 @@ function localStorageAvailable() {
   }
 }
 
-function updateStoredData(field, value, data) {
-  console.log(field, value, data);
-  formData[field] = value;
-  localStorage.setItem('contactFormSavedData', JSON.stringify(formData))
+function updateStoredData(savedData, field, value) {
+  savedData[field] = value;
+  localStorage.setItem('contactFormSavedData', JSON.stringify(savedData));
 }
 
 function setDataFromStorage(event) {
   if (!localStorageAvailable) { return false }
-  //Here Update the formfields with stored data
+
   let savedData = localStorage.getItem('contactFormSavedData');
-  console.log(savedData);
-
-  let fullName = document.querySelector('contact-fullname');
-  fullName.value = savedData['contact-fullname'];
-
-  let contactEmail = document.querySelector('contact-email');
-  contactEmail.value = savedData['contact-email'];
-
-  let contactMessage = document.querySelector('contact-message');
-  contactMessage.value = savedData['contact-message'];
-  // Ends Here
+  savedData = JSON.parse(savedData);
   contactFields.forEach((field) => {
-    form[field].addEventListener('input', event => {
-      updateStoredData(field, form[field].value, event.data)
+    if (savedData != null) {
+      form[field].value = savedData[field];
+    }
+
+    form[field].addEventListener('input', (event) => {
+      if (savedData == null) { savedData = {}; }
+      updateStoredData(savedData, field, form[field].value);
     })
+  });
+
+  form['reset-button'].addEventListener('click', (event) => {
+    localStorage.removeItem('contactFormSavedData');
   });
 }
 
