@@ -1,19 +1,17 @@
 const form = document.querySelector('#contactme');
 
-//Save contact form data into local storage.
+// Save contact form data into local storage.
 const contactFields = ['contact-fullname', 'contact-email', 'contact-message'];
 
 function localStorageAvailable() {
   let storage;
   try {
     const message = 'Storage_Test';
-    storage = window['localStorage'];
+    storage = window.localStorage;
     storage.setItem(message, message);
     storage.removeItem(message);
     return true;
-  }
-  catch (e) {
-    console.error(e);
+  } catch (e) {
     return false;
   }
 }
@@ -21,32 +19,37 @@ function localStorageAvailable() {
 function updateStoredData(savedData, field, value) {
   savedData[field] = value;
   localStorage.setItem('contactFormSavedData', JSON.stringify(savedData));
+  return true;
 }
 
-function setDataFromStorage(event) {
-  if (!localStorageAvailable) { return false }
+function setDataFromStorage() {
+  if (!localStorageAvailable) { return false };
 
   let savedData = localStorage.getItem('contactFormSavedData');
   savedData = JSON.parse(savedData);
-  contactFields.forEach((field) => {
-    if (savedData != null) {
-      form[field].value = savedData[field];
-    }
 
-    form[field].addEventListener('input', (event) => {
-      if (savedData == null) { savedData = {}; }
+  if (savedData == null) {
+    savedData = {};
+    contactFields.forEach((field) => {
+      updateStoredData(savedData, field, '');
+    });
+  }
+
+  contactFields.forEach((field) => {
+    form[field].value = savedData[field];
+    form[field].addEventListener('input', () => {
       updateStoredData(savedData, field, form[field].value);
-    })
+    });
   });
 
-  form['reset-button'].addEventListener('click', (event) => {
+  form['reset-button'].addEventListener('click', () => {
     localStorage.removeItem('contactFormSavedData');
   });
 }
 
 setDataFromStorage();
 
-//Email lowercase validation
+// Email lowercase validation
 function validateEmail(email) {
   if (email.value.trim() === email.value.trim().toLowerCase()) {
     return true;
