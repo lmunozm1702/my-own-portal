@@ -55,7 +55,7 @@ setDataFromStorage();
 
 //Email lowercase validation
 function validateEmail(email) {
-  if (email.value.trim() != email.value.trim().toLowerCase()) {
+  if (email.value.trim() === email.value.trim().toLowerCase()) {
     return true;
   }
   return false;
