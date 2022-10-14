@@ -23,7 +23,7 @@ function updateStoredData(savedData, field, value) {
 }
 
 function setDataFromStorage() {
-  if (!localStorageAvailable) { return false };
+  if (!localStorageAvailable) { return false; }
 
   let savedData = localStorage.getItem('contactFormSavedData');
   savedData = JSON.parse(savedData);
@@ -45,6 +45,7 @@ function setDataFromStorage() {
   form['reset-button'].addEventListener('click', () => {
     localStorage.removeItem('contactFormSavedData');
   });
+  return true;
 }
 
 setDataFromStorage();
