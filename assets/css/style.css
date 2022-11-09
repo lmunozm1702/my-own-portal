@@ -2,13 +2,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f9;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 10.667vw;
@@ -26,7 +26,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 10.667vw;
@@ -49,7 +49,7 @@ h2 {
 h3 {
   margin-top: 12px;
   margin-bottom: 12px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 8.533vw;
@@ -166,7 +166,7 @@ label {
   a:visited,
   a:focus,
   a:hover {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.042vw;
@@ -259,7 +259,7 @@ label {
 .main-normal-text {
   margin: 12px 0 0 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4.267vw;
@@ -277,7 +277,7 @@ label {
 .social-media-title {
   margin: 12px 0 0 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 4.267vw;
@@ -406,6 +406,7 @@ label {
 
 .work-img img {
   width: 100%;
+  max-width: 400px;
 }
 
 .work-main {
@@ -438,7 +439,7 @@ label {
 }
 
 .project-client {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 3.467vw;
@@ -455,7 +456,7 @@ label {
 }
 
 .project-info-text {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -472,7 +473,7 @@ label {
 }
 
 .work-text {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4vw;
@@ -508,7 +509,7 @@ label {
   padding: 4px 12px 4px 12px;
   margin-right: 8px;
   margin-bottom: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 3.2vw;
@@ -528,7 +529,7 @@ label {
 }
 
 .see-project-button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 4.533vw;
@@ -542,7 +543,7 @@ label {
 }
 
 .external-link-button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 4vw;
@@ -569,7 +570,7 @@ label {
   }
 
   .external-link-button {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.042vw;
@@ -633,7 +634,7 @@ label {
 }
 
 .experience-nav li {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 5.333vw;
@@ -677,7 +678,7 @@ label {
 }
 
 .experience-item {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 4vw;
@@ -790,7 +791,7 @@ label {
 }
 
 .contact-me p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 5.333vw;
@@ -825,7 +826,7 @@ label {
 }
 
 .contact-me-text textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4vw;
@@ -841,7 +842,7 @@ label {
 }
 
 ::placeholder {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4vw;
@@ -984,7 +985,7 @@ label {
 }
 
 .supporting-text {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4vw;
@@ -995,7 +996,7 @@ label {
 
 @media only screen and (min-width: 768px) {
   .supporting-text {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.111vw;
